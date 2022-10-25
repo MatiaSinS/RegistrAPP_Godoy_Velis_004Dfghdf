@@ -1,0 +1,25 @@
+<ion-app>
+
+  <ion-menu contentId="main" menuId="end" side="end">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Usuario</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+       <ion-list>
+          <ion-menu-toggle *ngFor="let a of componentesEnd">
+              <ion-item [routerLink]="a.redirecTo" detail=true>
+                <ion-icon slot="end" [name]="a.icon" color="primary"></ion-icon>
+                {{a.name}}
+              </ion-item>
+          </ion-menu-toggle>
+        </ion-list> 
+    </ion-content>
+  </ion-menu>
+
+
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

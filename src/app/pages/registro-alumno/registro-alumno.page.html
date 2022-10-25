@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title class="ion-text-center"> <ion-text color="light">Registr</ion-text> <ion-text color="warning">APP</ion-text></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.nombres" required minlength="2"
+    maxlength="32" pattern="[A-Za-z]{1,32}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido:</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.apellidos" required minlength="2"
+    maxlength="32" pattern="[A-Za-z]{1,32}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Rut:(Solo guión, sin puntos)</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.rut" required 
+    pattern="\d{3,8}-[\d|kK]{1}"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Correo:</ion-label>
+    <ion-input type="email" [(ngModel)]="newDato.email" required 
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></ion-input>
+  </ion-item>
+
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Sede" name="sede" [(ngModel)]="newDato.sede">
+      <ion-select-option value="Alameda">Sede Alameda</ion-select-option>
+      <ion-select-option value="Antonio Varas">Sede Antonio Varas</ion-select-option>
+      <ion-select-option value="Educacion Continua">Sede Educacion Continua</ion-select-option>
+      <ion-select-option value="Maipú">Sede Maipú</ion-select-option>
+      <ion-select-option value="Melipilla">Sede Melipilla</ion-select-option>
+      <ion-select-option value="Padre Alonso">Sede Padre Alonso de Ovalle</ion-select-option>      
+      <ion-select-option value="Plaza Norte">Sede Plaza Norte</ion-select-option>
+      <ion-select-option value="Plaza Oeste">Sede Plaza Oeste</ion-select-option>
+      <ion-select-option value="Puente Alto">Sede Puente Alto</ion-select-option>
+      <ion-select-option value="San Bernardo">Sede San Bernardo</ion-select-option>
+      <ion-select-option value="San Carlos de Apoquindo">Sede San Carlos de Apoquindo</ion-select-option>
+      <ion-select-option value="San Joaquín">Sede San Joaquín</ion-select-option>
+      <ion-select-option value="Valparaíso">Sede Valparaiso</ion-select-option>
+      <ion-select-option value="Viña del Mar">Sede Viña del Mar</ion-select-option>
+      <ion-select-option value="Campus Arauco">Campus Arauco</ion-select-option>
+      <ion-select-option value="Campus Nacimiento">Campus Nacimiento</ion-select-option>
+      <ion-select-option value="San Andrés de Concepcion">Sede San Andrés de Concepción</ion-select-option>
+      <ion-select-option value="Campus Villarrica">Campus Villarrica</ion-select-option>
+      <ion-select-option value="Puerto Montt">Sede Puerto Montt</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña:</ion-label>
+    <ion-input type="password" [(ngModel)]="newDato.password" required
+    ></ion-input>
+  </ion-item>
+  
+<ion-button (click)="addDatos()" expand="full" Href="/login">
+  Registrar como Alumno
+</ion-button>
+
+</ion-content>

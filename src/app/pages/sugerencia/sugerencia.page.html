@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    
+
+
+    <ion-title class="ion-text-center"> <ion-text color="light">Registr</ion-text> <ion-text color="warning">APP</ion-text></ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="menuUsuario()">
+        <ion-icon slot="icon-only" name="person-add-sharp" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  <ion-label>Email: </ion-label>
+  <ion-item>
+    
+    <ion-input type="email" placeholder="Ingrese Su Email" name="email"[(ngModel)]="usuario.email"></ion-input>
+  </ion-item>
+<ion-label>Sugerencia/Reclamo: </ion-label>
+  <ion-item>
+    
+    <ion-input type="text" placeholder="Ingrese Su Sugerencia o Reclamo" name="suge" [(ngModel)]="usuario.suge"  required></ion-input>
+  </ion-item>
+
+  <ion-button [disabled]="formulario.invalid" type="submit" expand="full" fill="outline" shape="round" routerLink="/inicio">
+   Enviar
+  </ion-button>
+</form>
+</ion-content>

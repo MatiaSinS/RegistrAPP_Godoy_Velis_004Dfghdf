@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    
+    <ion-title class="ion-text-center"> <ion-text color="light">Registr</ion-text> <ion-text color="warning">APP</ion-text></ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="menuUsuario()">
+        <ion-icon slot="icon-only" name="person-circle-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="ion-text-center">
+  <img src="assets/perfil.jpg" class="ion-padding">
+    
+  <ion-label>Nombre: {{nombre}}</ion-label>
+  <br><br>
+  <ion-label>Apellido: {{apellido}}</ion-label>
+  <br><br>
+  <ion-label>Rut: {{rut}}</ion-label>
+  <br><br>
+  <ion-label>Correo: {{correo}}</ion-label>
+  <br><br>
+  <ion-label>Sede: {{sede}}</ion-label>
+ 
+  </form> 
+
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    
+    <ion-title class="ion-text-center"> <ion-text color="light">Registr</ion-text> <ion-text color="warning">APP</ion-text></ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="menuUsuario()">
+        <ion-icon slot="icon-only" name="person-circle-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor=" let feriado of feriados">
+        <ion-card color="secondary" >
+          <ion-card-content style="height: auto; width:200px">
+            {{feriado.title}}
+            <br>
+            {{feriado.date}}
+            <br>
+            {{feriado.extra}}
+          </ion-card-content>
+        </ion-card>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
